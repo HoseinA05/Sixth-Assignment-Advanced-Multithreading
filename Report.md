@@ -8,7 +8,7 @@
 ### 1st Way:
 On the first approach for solving this problem and calculating PI Number with high accuracy,
 I used a way which was a series to calculate PI / 4.
-![1st Way Formula](.\src\resources\report-sources\1st-way.png)
+![1st Way Formula](./1st-way.png)
 This series was bad, I tried to go with 100,000 terms, but it couldn't
 calculate 7 digits correctly. So I moved to the next formula I found.
 
@@ -17,7 +17,7 @@ The 2nd way I got with was Ramanujan-Sato Series, This series result
 gave 1 / PI and it was great, by calculating 200 terms and 1100 precision 
 it calculated 1000 digits correctly, although it needed high cpu process
 for calculating each term but by using multithreading it was not a big deal.
-![](D:\Hosein\University\Term2\AP\06_Sixth-assignment\Sixth-Assignment-Advanced-Multithreading\src\resources\report-sources\2nd-way.png)
+![](./2nd-way.png)
 the implementation was pretty easy too. by using BigDecimal class and 
 it's methods and also MathContext for setting the precision for calculations
 the implementation was done.  
