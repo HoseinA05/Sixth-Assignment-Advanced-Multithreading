@@ -17,7 +17,7 @@ The 2nd way I got with was Ramanujan-Sato Series, This series result
 gave 1 / PI and it was great, by calculating 200 terms and 1100 precision 
 it calculated 1000 digits correctly, although it needed high cpu process
 for calculating each term but by using multithreading it was not a big deal.
-![](./2nd-way.png)
+![2nd Way Formula](./2nd-way.png)
 the implementation was pretty easy too. by using BigDecimal class and 
 it's methods and also MathContext for setting the precision for calculations
 the implementation was done.  
