@@ -31,12 +31,5 @@ public class Controller {
         operator4.start();
         operator5.start();
 
-        /*
-        TODO
-            Use a Semaphore to solve the synchronization problem.
-            Every time a thread accesses the resource, print its Name and the current System Time.
-            Combine the 4 resulting blocks to create the final matrix product and return it.
-         */
-
     }
 }

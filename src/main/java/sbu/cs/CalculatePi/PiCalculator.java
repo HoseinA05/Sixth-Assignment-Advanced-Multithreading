@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
 public class PiCalculator {
 
     public static class calculatePI implements Runnable {
-        static MathContext mc = new MathContext(1100); // Increased precision
+        static MathContext mc = new MathContext(1100);
         int n;
         static final BigDecimal C = new BigDecimal(2).multiply(new BigDecimal(2).sqrt(mc), mc).divide(new BigDecimal(9801), mc);
 
@@ -46,7 +46,7 @@ public class PiCalculator {
 
         sum = BigDecimal.ZERO;
 
-        int numberOfTerms = 200; // Increase this to improve precision
+        int numberOfTerms = 200;
         for (int i = 0; i <= numberOfTerms; i++) {
             calculatePI task = new calculatePI(i);
             threadpool.execute(task);
@@ -56,9 +56,7 @@ public class PiCalculator {
 
         try {
             threadpool.awaitTermination(10000, TimeUnit.MILLISECONDS);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        } catch (InterruptedException ignored) { }
 
         return BigDecimal.ONE.divide(sum, new MathContext(1100)).setScale(floatingPoint, RoundingMode.DOWN).toString();
     }
