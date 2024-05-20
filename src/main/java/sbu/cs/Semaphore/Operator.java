@@ -1,5 +1,7 @@
 package sbu.cs.Semaphore;
 
+import java.time.LocalTime;
+
 public class Operator extends Thread {
 
     public Operator(String name) {
@@ -13,7 +15,7 @@ public class Operator extends Thread {
             Resource.accessResource(this); // critical section - a Maximum of 2 operators can access the resource concurrently
             try {
                 sleep(500);
-                System.out.println(this.getName() + " Finished i: " + i);
+                System.out.println(this.getName() + " Finished i: " + i + " (" + LocalTime.now() + ")");
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
